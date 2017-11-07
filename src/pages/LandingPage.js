@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 
+import Input from '../components/Input';
+import Nav from '../components/Nav';
+
 export default class LandingPage extends Component {
 
+    constructor() {
+        super();
+
+        this.handleLoginKeyUp = this.keyUpHandler.bind(this, 'LoginInput');
+        this.handlePwdKeyUp = this.keyUpHandler.bind(this, 'PwdInput');
+    }
+
+    keyUpHandler(refName, e) {
+        console.log(refName);
+        // prints either LoginInput or PwdInput
+    }
 
     renderProducts() {
 
@@ -24,8 +38,8 @@ export default class LandingPage extends Component {
 
         return products.map((e) => {
             return (
-                <div key={e.name} className="col-3">
-                    <img className="card-img-top product_image" src={e.image} alt="Card image cap"></img>
+                <div key={e.name} className="product col-3">
+                    <img className="card-img-top product_image" src={e.image} alt="Card cap"></img>
                     <div className="card-block">
                         <p className="product_name">{e.name}</p>
                         <p className="product_price">{e.price}</p>
@@ -33,31 +47,13 @@ export default class LandingPage extends Component {
                 </div>
             );
         });
-
-
     }
 
 
     render() {
         return(
             <div className="container">
-                <nav className="navbar navbar-expand-lg">
-                    <a className="navbar-brand">
-                        <img src="/assets/logo.png" width="212" height="54" alt=""></img>
-                    </a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div className="navbar-nav mr-auto">
-                    </div>
-                    <form className="form-inline my-2 my-lg-0">
-                      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    </div>
-                </nav>
+                <Nav/>
 
                 <div className="row justify-content-center">
 
@@ -65,10 +61,9 @@ export default class LandingPage extends Component {
                             <h2 className="form-signin-heading text-center">Please sign in</h2>
                             <p className="form-signin-sub-heading text-center">Unlock Awesome Features!</p>
 
-                            <label htmlFor="inputEmail">Email address</label>
-                            <input type="email" id="inputEmail" className="form-control" placeholder="Email address"></input>
-                            <label htmlFor="inputPassword">Password</label>
-                            <input type="password" id="inputPassword" className="form-control" placeholder="Password"></input>
+                            <Input key="usernameInput" type="text" label="Username" placeholder="Username"/>
+                            <Input key="inputPassword" type="password" label="Password" placeholder="Password"/>
+
                             <div className="checkbox">
                                 <div className="row">
                                     <label htmlFor="remember-me" className="col-7">
@@ -76,9 +71,6 @@ export default class LandingPage extends Component {
                                     </label>
                                     <a className="col-5">Forgot password?</a>
                                 </div>
-
-
-
                             </div>
                             <button className="btn btn-lg btn-primary btn-block form-signin-submit" type="submit">SIGN IN</button>
                         </form>

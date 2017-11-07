@@ -3,6 +3,8 @@
     padding: 50px;
     width: 400px;
     border: 2px solid #F5F5F5;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .form-signin .checkbox {
@@ -13,12 +15,58 @@
     padding-top: 5px;
 }
 
+.form-signin-tops {
+    margin-top: 30px;
+}
+
 .form-signin label {
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(65, 65, 65);
-    font-style: italic;
-    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+}
+
+.form-signin label span {
+    position: absolute;
+    left: 0px;
+    top: -2em;
+    cursor: text;
+    transition: all 150ms ease;
+}
+
+
+.form-signin-invalid {
+    border: 2px solid #F6303F;
+}
+
+.form-signin label.empty input {
+    border-color: #d9d9d9;
+}
+
+
+.form-signin label.empty span {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    background: none;
+    color: #cccccc;
+}
+
+.form-signin input {
+    border: 2px solid #f2f2f2;
+    outline: none;
+}
+
+.form-signin input:focus {
+    border-color: #d9d9d9;
+}
+
+.form-signin-invalid {
+    border: 2px solid #F6303F;
+}
+
+.form-signin input, button {
+    padding: 15px 20px;
+    border-radius: 1px;
+    border: 2px solid #bdbdbd;
 }
 
 .form-signin-submit {
@@ -41,239 +89,79 @@
 }
 
 .form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
 }
 .form-signin .form-control:focus {
-  z-index: 2;
+    z-index: 2;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-radius: 5px;
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    width: 300px;
 }
 
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.form-signin-warning {
+    position: relative;
+    margin: -25px 0;
+    float: right;
+    font-size: 12px;
+    font-family: "Open Sans";
+    color: #F6303F;
+    background: rgba(255, 240, 241, 100);
+    width: 114px;
+    height: 25px;
+    padding-top: 3px;
+
 }
 
 
+.carre-navbar {
+    margin-top: 20px;
+}
 
+.search-field {
+    background: #F0F7FE url("/assets/icon.png") no-repeat;
+    background-position: 95% 50%;
+    height: 43px;
+}
 
+.search-field-small {
+    background: #F0F7FE url("/assets/icon.png") no-repeat;
+    background-position: 95% 50%;
+    width: 43px;
+    height: 43px;
+}
 
-
-
-
+.product {
+    margin-top: 70px;
+}
 
 .product_price {
-  font-size: 18px;
-  font-family: "Open Sans";
-  color: rgb(0, 0, 0);
-  line-height: 1.2;
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    margin: 0;
 }
 
 .product_name {
-  font-size: 14px;
-  font-family: "Open Sans";
-  color: rgb(65, 65, 65);
-  line-height: 1.2;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(65, 65, 65);
+    margin: 0;
+    padding-top: 20px;
 }
 
 .product_image {
-  width: 228px;
-  height: 228px;
-}
-
-
-.Username {
-  font-size: 14px;
-  font-family: "Open Sans";
-  color: rgb(221, 221, 221);
-  line-height: 1.2;
-  position: absolute;
-  left: 369.812px;
-  top: 305.1px;
-  z-index: 44;
-}
-.Rounded_Rectangle_3 {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(246, 48, 63);
-  border-radius: 3px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: inset 0.5px 0.866px 3px 0px rgba(246, 246, 246, 0.004);
-  position: absolute;
-  left: 350px;
-  top: 291px;
-  width: 298px;
-  height: 43px;
-  z-index: 43;
-}
-.Required_field {
-  font-size: 12px;
-  font-family: "Open Sans";
-  color: rgb(246, 48, 63);
-  line-height: 1.2;
-  position: absolute;
-  left: 551.891px;
-  top: 272.517px;
-  z-index: 42;
-}
-.Rectangle_4 {
-  background-color: rgb(255, 240, 241);
-  position: absolute;
-  left: 535px;
-  top: 269px;
-  width: 112px;
-  height: 23px;
-  z-index: 41;
-}
-.Password {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1000px;
-  height: 1045px;
-  z-index: 39;
-}
-.Password {
-  font-size: 14px;
-  font-family: "Open Sans";
-  color: rgb(221, 221, 221);
-  line-height: 1.2;
-  position: absolute;
-  left: 369.625px;
-  top: 380.6px;
-  z-index: 38;
-}
-.Rounded_Rectangle_4 {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(246, 48, 63);
-  border-radius: 3px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: inset 0.5px 0.866px 3px 0px rgba(246, 246, 246, 0.004);
-  position: absolute;
-  left: 350px;
-  top: 366px;
-  width: 298px;
-  height: 42px;
-  z-index: 37;
-}
-.Required_field_copy {
-  font-size: 12px;
-  font-family: "Open Sans";
-  color: rgb(246, 48, 63);
-  line-height: 1.2;
-  position: absolute;
-  left: 552.891px;
-  top: 347.517px;
-  z-index: 36;
-}
-.Rectangle_4_copy {
-  background-color: rgb(255, 240, 241);
-  position: absolute;
-  left: 536px;
-  top: 344px;
-  width: 112px;
-  height: 23px;
-  z-index: 35;
-}
-.Keep_me_logged_in {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1000px;
-  height: 1045px;
-  z-index: 33;
-}
-.Checkbox {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1000px;
-  height: 1045px;
-  z-index: 32;
-}
-.Rectangle_3 {
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  left: 353px;
-  top: 435px;
-  width: 14px;
-  height: 10px;
-  z-index: 31;
-}
-.Rounded_Rectangle_5 {
-  border-radius: 3px;
-  background-color: rgb(5, 84, 159);
-  position: absolute;
-  left: 350px;
-  top: 430px;
-  width: 20px;
-  height: 20px;
-  z-index: 30;
-}
-.Forgot_password_ {
-  font-size: 12px;
-  font-family: "Open Sans";
-  color: rgb(5, 84, 159);
-  line-height: 1.2;
-  position: absolute;
-  left: 550.859px;
-  top: 431.517px;
-  z-index: 28;
-}
-.Keep_me_logged_in {
-  font-size: 12px;
-  font-family: "Open Sans";
-  color: rgb(65, 65, 65);
-  line-height: 1.2;
-  position: absolute;
-  left: 379.875px;
-  top: 431.517px;
-  z-index: 27;
-}
-.Sign_In {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1000px;
-  height: 1045px;
-  z-index: 25;
-}
-.SIGN_IN {
-  font-size: 20px;
-  font-family: "Open Sans";
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  position: absolute;
-  left: 462.016px;
-  top: 483px;
-  z-index: 24;
-}
-.Rounded_Rectangle_2 {
-  border-radius: 3px;
-  background-color: rgb(5, 84, 159);
-  position: absolute;
-  left: 350px;
-  top: 470px;
-  width: 300px;
-  height: 50px;
-  z-index: 23;
-}
-.Rectangle_1 {
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(246, 246, 246);
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  left: 295px;
-  top: 149px;
-  width: 404px;
-  height: 410px;
-  z-index: 21;
+    width: 228px;
+    height: 228px;
 }
