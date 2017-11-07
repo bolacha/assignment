@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { request, plugins } from 'popsicle';
 
 import Input from '../components/Input';
 import Nav from '../components/Nav';
@@ -43,12 +44,26 @@ export default class LandingPage extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        console.log('Clear HERE');
+        const {username , password} = this.state;
 
-        this.setState({
-            username: '',
-            password: ''
-        });
+        request({
+                method: 'POST',
+                url: "http://assignment.text/auth",
+                body: {
+                    username: username,
+                    password: password
+                },
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .use(plugins.parse('json'))
+            .then(function (res) {
+                this.setState({
+                    username: '',
+                    password: ''
+                });
+            });
     }
 
     renderProducts() {
@@ -96,7 +111,7 @@ export default class LandingPage extends Component {
                             <p className="form-signin-sub-heading text-center">Unlock awesome features!</p>
 
                             <Input idInput="usernameInput" type="text" label="Username" placeholder="Username" value={this.state.username} onChange={this.onChangeUsername}/>
-                            <Input key="inputPassword" type="password" label="Password" placeholder="Password" value={this.state.password} onChange={this.onChangePassword}/>
+                            <Input idInput="inputPassword" type="password" label="Password" placeholder="Password" value={this.state.password} onChange={this.onChangePassword}/>
 
                             <div className="checkbox">
                                 <div className="row">
