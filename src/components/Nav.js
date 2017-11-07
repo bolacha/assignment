@@ -36,7 +36,7 @@ export default class Nav extends Component {
         if (!this.state.clicked) {
             return(
                 <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control search-field-small" onClick={this.clickSearch}  onBlur={this.leaveSearch} onChange={this.changeValue} type="search" aria-label="Search" value={this.state.value}></input>
+                    <input className="form-control search-field-small" onClick={this.clickSearch}  onBlur={this.leaveSearch} onChange={this.changeValue} type="button" aria-label="Search" value={this.state.value}></input>
                 </form>
             );
         } else {
