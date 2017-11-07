@@ -103,7 +103,9 @@ export default class LandingPage extends Component {
         return(
             <div className="container">
                 <Nav/>
-
+                <form className="form-inline my-2 my-lg-0 search-bar-mobile">
+                    <input className="form-control mr-sm-2 search-field" onClick={this.clickSearch} onBlur={this.leaveSearch} onChange={this.changeValue} type="search" placeholder="Search" value={this.state.value} aria-label="Search"></input>
+                </form>
                 <div className="row justify-content-around">
 
                         <form className="form-signin" onSubmit={this.handleSubmit}>
