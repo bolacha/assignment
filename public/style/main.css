@@ -7,6 +7,20 @@
     margin-bottom: 50px;
 }
 
+.link-forgot {
+    font-size: 12px;
+    font-family: "Open Sans";
+    color: rgb(5, 84, 159);
+    line-height: 1.2;
+}
+
+.keep-me-logged {
+    font-size: 12px;
+    font-family: "Open Sans";
+    color: rgb(65, 65, 65);
+    line-height: 1.2;
+}
+
 .form-signin .checkbox {
     font-size: 12px;
     font-family: "Open Sans";
@@ -22,6 +36,13 @@
 .form-signin label {
     position: relative;
     display: inline-block;
+}
+
+.form-signin-labels {
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(65, 65, 65);
+    font-style: italic;
 }
 
 .form-signin label span {
@@ -60,7 +81,14 @@
 }
 
 .form-signin-invalid {
-    border: 2px solid #F6303F;
+    border: 2px solid #F6303F !important;
+}
+
+.form-signin-invalid:focus {
+    /* Rounded Rectangle 3: */
+    background: #FFFFFF;
+    border: 2px solid #F6303F !important;
+    box-shadow: 0 0 7px 0 rgba(246,48,63,.75);
 }
 
 .form-signin input, button {
@@ -133,17 +161,46 @@
     background: #F0F7FE url("/assets/icon.png") no-repeat;
     background-position: 95% 50%;
     height: 43px;
+    border: 0;
+
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
 
 .search-field-small {
     background: #F0F7FE url("/assets/icon.png") no-repeat;
-    background-position: 95% 50%;
-    width: 43px;
+    background-position: 50% 50%;
+    width: 43px !important;
     height: 43px;
+    border: 0;
+}
+
+@media (max-width: 680px) {
+    .product {
+        margin-top: 70px;
+        margin: auto;
+        width: 50%;
+
+    }
+}
+
+@media (min-width: 680px) {
+    .product {
+        margin-top: 70px;
+    }
 }
 
 .product {
     margin-top: 70px;
+    @media (max-width: 680px) {
+        margin: auto;
+        width: 50%;
+    }
 }
 
 .product_price {

@@ -6,29 +6,47 @@ export default class Nav extends Component {
         super();
 
         this.state = {
-            clicked: false
+            clicked: false,
+            value: ''
         }
 
         this.clickSearch = this.clickSearch.bind(this);
+        this.leaveSearch = this.leaveSearch.bind(this);
+        this.changeValue = this.changeValue.bind(this);
+        this.renderSearchBar = this.renderSearchBar.bind(this);
     }
 
     clickSearch() {
         this.setState({clicked: true})
     }
 
+    leaveSearch() {
+        if (this.state.value.length === 0) {
+            this.setState({clicked: false})
+        }
+    }
+
+    changeValue(evt) {
+        this.setState({value: evt.target.value});
+    }
+
 
     renderSearchBar() {
-        if(!this.state.clicked) {
+        //clickSearch
+        if (!this.state.clicked) {
             return(
                 <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2 search-field" type="search" placeholder="Search" aria-label="Search"></input>
+                    <input className="form-control search-field-small" onClick={this.clickSearch}  onBlur={this.leaveSearch} onChange={this.changeValue} type="search" aria-label="Search" value={this.state.value}></input>
                 </form>
             );
         } else {
-            <form className="form-inline my-2 my-lg-0">
-                <input className="form-control mr-sm-2 search-field" type="search" placeholder="Search" aria-label="Search"></input>
-            </form>
+            return(
+                <form className="form-inline my-2 my-lg-0">
+                    <input className="form-control mr-sm-2 search-field" onClick={this.clickSearch} onBlur={this.leaveSearch} onChange={this.changeValue} type="search" placeholder="Search" value={this.state.value} aria-label="Search"></input>
+                </form>
+            );
         }
+
     }
 
     render() {

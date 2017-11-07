@@ -33,15 +33,15 @@ export default class Input extends Component {
 
     render() {
 
-        const { key, type, label, placeholder } = this.props;
+        const { idInput, type, label, placeholder } = this.props;
         const { keyUp, valid } = this.state;
 
         return (
-            <label className={ !keyUp ? 'form-signin-tops empty' : 'form-signin-tops' } htmlFor={key}>
-                <span>{label}</span>
+            <label className={ !keyUp ? 'form-signin-tops empty' : 'form-signin-tops' } htmlFor={idInput}>
+                <span className="form-signin-labels">{label}</span>
                 { this.displayAlert() }
 
-                <input type={type} id={key} className={ !valid ? 'form-control form-signin-invalid' : 'form-control' } onKeyUp={this.handleKeyUp} placeholder={placeholder}></input>
+                <input type={type} id={idInput} className={ !valid ? 'form-control form-signin-invalid' : 'form-control' } onKeyUp={this.handleKeyUp} onChange={this.props.onChange} value={this.props.value} placeholder={placeholder}></input>
             </label>
         );
     }
