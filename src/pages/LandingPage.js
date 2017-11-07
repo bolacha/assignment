@@ -64,22 +64,29 @@ export default class LandingPage extends Component {
                     password: ''
                 });
             });
+
+
+            //Since we do have a server I am cleaning the credentials here:
+            this.setState({
+                username: '',
+                password: ''
+            });
     }
 
     renderProducts() {
 
         const products = [
             {
-                image : '/assets/product.png',
+                image : 'assets/product.png',
                 name  : 'iPhone 6 Black',
                 price : 'AED 1000'
             },
             {
-                image : '/assets/product.png',
+                image : 'assets/product.png',
                 name  : 'iPhone 7 Black',
                 price : 'AED 1000'
             },{
-                image : '/assets/product.png',
+                image : 'assets/product.png',
                 name  : 'iPhone 8 Black',
                 price : 'AED 1000'
             }
