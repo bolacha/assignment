@@ -1,8 +1,16 @@
 # assignment
 Assignment for Interview - Front End Skills
 
-This is how the React + Bootstrap looks , still an work in progress.
+- [ ] Still missing front-end tests
+- [ ] More responsives and animations
+- [ ] Add SCSS instead of plain CSS
+- [ ] Webpack for Component based SCSS compiling ( Easy for Maintaining )
 
-![alt text](https://github.com/bolacha/assignment/blob/master/docs/ipad.png "Logo Title Text 1")
+## Web
 ![alt text](https://github.com/bolacha/assignment/blob/master/docs/web.png "Logo Title Text 1")
+
+## iPAD
+![alt text](https://github.com/bolacha/assignment/blob/master/docs/ipad.png "Logo Title Text 1")
+
+## Mobile
 ![alt text](https://github.com/bolacha/assignment/blob/master/docs/mobile.png "Logo Title Text 1")
